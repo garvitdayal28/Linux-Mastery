@@ -1,2 +1,2 @@
-export const BACKEND_URL = "http://localhost:3000";
-export const SOCKET_URL = "http://localhost:3000";
+export const BACKEND_URL = process.env.VITE_SOCKET_URL
+export const SOCKET_URL = process.env.VITE_SOCKET_URL
