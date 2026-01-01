@@ -1,6 +1,6 @@
-import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Navbar } from "./reusable/Navbar";
+
 import Home from "./components/Home";
 import Courses from "./components/Courses";
 import Playground from "./components/Playground";
