@@ -1,6 +1,7 @@
 import React, { useEffect,  } from "react";
 import { Terminal } from "@xterm/xterm";
 import { FitAddon } from "@xterm/addon-fit";
+import '@xterm/xterm/css/xterm.css';
 import { io } from "socket.io-client";
 import { SOCKET_URL } from "../lib/constans";
 
