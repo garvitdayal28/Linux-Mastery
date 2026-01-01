@@ -1,16 +1,41 @@
-# React + Vite
+# Linux-Mastery
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**Linux Mastery Frontend**
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🐧 Linux Mastery - Virtual Linux Lab
 
-## React Compiler
+A full-stack web application designed for students to learn Linux commands through a real-time, browser-based terminal. Each user session spawns an isolated Ubuntu Docker container, providing a safe and authentic playground for learning.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Authentic Terminal**: Powered by xterm.js, providing a professional terminal look and feel.
+
+- **Isolated Sandboxing**: Uses Docker containers to ensure student actions do not affect the host system.
+
+- **Real-Time Interaction**: Zero-latency communication using WebSockets (socket.io).
+
+- **Resource Management**: Automatically cleans up containers on disconnect using the `--rm` flag and explicit cleanup logic.
+
+- **Responsive UI**: Styled with Tailwind CSS v4 and Framer Motion.
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- React 19 (Vite)
+- Tailwind CSS v4
+- xterm.js (Terminal Engine)
+- Socket.io-client
+
+### Backend
+
+- Node.js (Express)
+- Socket.io (WebSockets)
+- node-pty (Pseudo-terminal handler)
+- Docker (Containerization)
