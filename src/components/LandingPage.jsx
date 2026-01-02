@@ -17,7 +17,9 @@ const LandingPage = () => {
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
-          >
+
+            className="font-bold text-6xl mt-10 text-transparent bg-clip-text bg-linear-to-r from-stone-500 to-stone-700"
+            >
             Master Linux
           </motion.h1>
 
@@ -25,6 +27,8 @@ const LandingPage = () => {
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeInOut" }}
+            className="font-bold text-5xl mt-2 text-transparent bg-clip-text bg-linear-to-r from-neutral-500 to-stone-700
+            "
           >
             from Basic to Advance
           </motion.h2>

@@ -8,14 +8,14 @@ import LandingPage from "./components/LandingPage";
 
 function App() {
   return (
-    <>
+    <div className="w-screen h-screen bg-linear-to-br from-gray-900 to-slate-600">
     <Routes>
       <Route path="/" element={<LandingPage />} />
       <Route path="/home" element={<Home />} />
       <Route path="/courses" element={<Courses />} />
       <Route path="/playground" element={<Playground />} />
     </Routes>
-    </>
+    </div>
   );
 }
 
