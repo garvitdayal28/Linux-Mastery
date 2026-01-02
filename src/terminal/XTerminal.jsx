@@ -17,7 +17,6 @@ const XTerminal = () => {
     term.loadAddon(fitaddon);
     term.open(document.getElementById("terminal"));
     fitaddon.fit();
-    term.write("Hello from \x1B[1;3;31mxterm.js\x1B[0m $ ");
     term.onData((data) => {
       socket.emit("terminal-input", data);
     });
