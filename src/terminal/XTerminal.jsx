@@ -1,7 +1,7 @@
-import React, { useEffect,  } from "react";
+import React, { useEffect } from "react";
 import { Terminal } from "@xterm/xterm";
 import { FitAddon } from "@xterm/addon-fit";
-import '@xterm/xterm/css/xterm.css';
+import "@xterm/xterm/css/xterm.css";
 import { io } from "socket.io-client";
 import { SOCKET_URL } from "../lib/constans";
 
@@ -9,7 +9,10 @@ const XTerminal = () => {
   useEffect(() => {
     const term = new Terminal();
     const fitaddon = new FitAddon();
-    const socket = io(SOCKET_URL, { transports: ["websocket"] });
+    const socket = io(SOCKET_URL, {
+      transports: ["polling", "websocket"],
+      secure: false,
+    });
 
     term.loadAddon(fitaddon);
     term.open(document.getElementById("terminal"));
@@ -18,8 +21,9 @@ const XTerminal = () => {
     term.onData((data) => {
       socket.emit("terminal-input", data);
     });
-    socket.on("terminal-output", (data) =>
-    {term.write(data)})
+    socket.on("terminal-output", (data) => {
+      term.write(data);
+    });
 
     return () => {
       term.dispose();

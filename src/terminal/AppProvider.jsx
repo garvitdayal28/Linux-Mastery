@@ -1,6 +1,7 @@
 import { createContext, useLayoutEffect } from "react";
 import { useActorRef, useSelector } from "@xstate/react";
 import { DataContext } from "./DataProvider.jsx";
+import { SOCKET_URL } from "../lib/constans.js";
 export const AppContext = createContext();
 
 export default function AppProvider({ children }) {
@@ -11,7 +12,7 @@ export default function AppProvider({ children }) {
   
     useLayoutEffect(()=>{
         if(data.webSocket===null){
-            setData({webSocket:"http://localhost:3000"})
+            setData({webSocket:SOCKET_URL})
         }
 
         if(data.webSocket !=null && data.terminal != null){

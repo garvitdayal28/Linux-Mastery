@@ -5,28 +5,6 @@ import { io } from "socket.io-client";
 import { motion } from "motion/react";
 
 const LandingPage = () => {
-  const socketRef = useRef(null);
-
-  useEffect(() => {
-    socketRef.current = io("http://localhost:3000");
-
-    socketRef.current.on("connect", () => {
-      console.log("Connected:", socketRef.current.id);
-    });
-
-    socketRef.current.on("connect_error", (err) => {
-      console.error("Connect error:", err.message);
-    });
-
-    socketRef.current.on("disconnect", (reason) => {
-      console.log("Disconnected:", reason);
-    });
-
-    return () => {
-      socketRef.current.disconnect();
-    };
-  }, []);
-
   return (
     <div>
       <Navbar />
